@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://screens/startMenu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/demo_collection/dark/splash_screen.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/awesome_splash/core/SplashContainer.gd" type="Script" id=3]
+
+[node name="SplashContainer" type="Node2D"]
+script = ExtResource( 3 )
+move_to_scene = ExtResource( 1 )
+trainsition_type = 5
+custom_node/type = 0
+custom_node/default_time = 1.0
+skip/type = 0
+min_pixel = 1.0
+max_pixel = 128.0
+transition_time = 1.0
+
+[node name="SplashDark" parent="." instance=ExtResource( 2 )]
+is_skip_appear_transition = true
+is_skip_disappear_transition = true
+logo_path = "res://src/logoEmptyCoffeeMug.jpg"
+title = ""
+description = ""
+vfx_color = Color( 0.231373, 0.921569, 0.14902, 0 )
+title_font_size = 0.0
